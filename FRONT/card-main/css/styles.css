@@ -1,0 +1,99 @@
+/* Variaveis CSS - :root para criar variavel*/
+
+:root {
+    --color-green: hsl(75, 94%, 57%);
+    --color-white: hsl(0, 0%, 100%);
+    --color-grey-700: hsl(0, 0%, 20%);
+    --color-grey-800: hsl(0, 0%, 12%);
+    --color-grey-900: hsl(0, 0%, 8%);
+    --spacing-10: 10px;
+    --spacing-20: 20px;
+}
+
+/* Reset CSS - usamos o seletor universal * === todos os elementos da pagina */
+* {
+    margin: 0; /* margin para espaçamento externo */
+    padding: 0;  /* padding para espaçamento interno */
+    box-sizing: border-box; /* para que ele não cresca ao usar o padding */
+}
+
+/* REGRA
+seletor =  {
+propriedade: valor;
+} */
+
+/* background para fundo / color para texto (linha 26) / width - para largura*/
+body {
+    background-color: var(--color-grey-900);
+    font-family: "Inter", sans-serif;
+}
+
+/* para tirar o listamento dos links */
+ol, ul {
+    list-style: none;
+}
+
+
+/* . = class / text-align = para centralizar texto e img */
+.container {
+    background-color: var(--color-grey-800);
+    color: var(--color-white);
+    width: 400px;
+    text-align: center;
+    padding: var(--spacing-10) var(--spacing-20);
+    margin: 16px auto;
+    border-radius: 8px;
+}
+
+.container img {
+    border-radius: 50%;
+    border: 3px solid var(--color-white);
+    transition: .5s;
+}
+
+.container:hover img {
+    border-color: var(--color-green);
+    scale: 1.1;
+}
+
+.container h1 {
+    font-size: 38px;
+    font-weight: 300;
+    margin-block: var(--spacing-10); 
+}
+
+.container h2 {
+    color: var(--color-green);
+    font-size: 26px;
+    font-weight: 200;
+    margin-bottom: var(--spacing-10);
+}
+
+.container p {
+    font-size: 13px;
+    font-weight: 200;
+    margin-block: var(--spacing-10);
+}
+
+.social li {
+    background-color: var(--color-grey-700);
+    margin-block: var(--spacing-20);
+    border-radius: 8px;
+}
+
+.social a {
+    border-radius: 8px;
+    color: var(--color-white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    transition: .5s;
+    padding-block: var(--spacing-10);
+}
+
+.social a:hover {
+    background-color: var(--color-green);
+    color: var(--color-grey-900);
+}
+
